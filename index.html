@@ -238,7 +238,7 @@
       position: -webkit-sticky;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: var(--c-bg-dark);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
@@ -247,6 +247,9 @@
       align-items: center;
       justify-content: space-between;
       height: 56px;
+      position: relative;
+      z-index: 1001;
+      background: var(--c-bg-dark);
     }
     .header__logo {
       font-family: var(--f-head);
@@ -301,6 +304,8 @@
       align-items: center;
       gap: 6px;
       -webkit-tap-highlight-color: transparent;
+      position: relative;
+      z-index: 1001;
     }
     .header__burger span {
       display: block;
@@ -324,15 +329,18 @@
     .header__overlay {
       display: none;
       position: fixed;
-      inset: 0;
       top: 56px;
-      z-index: 99;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
       background: var(--c-bg-dark);
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: var(--sp-xl);
       padding: var(--sp-2xl);
+      overflow-y: auto;
     }
     .header__overlay a {
       font-family: var(--f-mono);
